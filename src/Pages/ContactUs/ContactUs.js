@@ -106,7 +106,7 @@ const ContactUs = () => {
             <h1 className="contact_text_h1">Schedule a call with us</h1>
             <p className="contact_text">
               To receive further information, please fill out the form below,
-              and we'll be in touch with you shortly.
+              and we'll be in touch with you shortly...???
             </p>
           </div>
         </div>
