@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CloudifyTests/static/css/main.6e424ad3.css",
-    "main.js": "/CloudifyTests/static/js/main.4a48bc41.js",
+    "main.css": "/CloudifyTests/static/css/main.beb01cab.css",
+    "main.js": "/CloudifyTests/static/js/main.8f0af144.js",
     "static/js/787.c186ffed.chunk.js": "/CloudifyTests/static/js/787.c186ffed.chunk.js",
     "static/media/Capabilities_page.svg": "/CloudifyTests/static/media/Capabilities_page.dc46a32c9c2c82b9f1d8b47bc6400c3a.svg",
     "static/media/Dashboard.svg": "/CloudifyTests/static/media/Dashboard.bc0a7b21253b1b93d92df6de83e53ebf.svg",
@@ -21,12 +21,12 @@
     "static/media/on-premise cluster.svg": "/CloudifyTests/static/media/on-premise cluster.edc4e39e347bd3ec999492631cf51eb9.svg",
     "static/media/manual-sessions.svg": "/CloudifyTests/static/media/manual-sessions.b22fe7134ba07ac1d8d62aa108b10071.svg",
     "index.html": "/CloudifyTests/index.html",
-    "main.6e424ad3.css.map": "/CloudifyTests/static/css/main.6e424ad3.css.map",
-    "main.4a48bc41.js.map": "/CloudifyTests/static/js/main.4a48bc41.js.map",
+    "main.beb01cab.css.map": "/CloudifyTests/static/css/main.beb01cab.css.map",
+    "main.8f0af144.js.map": "/CloudifyTests/static/js/main.8f0af144.js.map",
     "787.c186ffed.chunk.js.map": "/CloudifyTests/static/js/787.c186ffed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e424ad3.css",
-    "static/js/main.4a48bc41.js"
+    "static/css/main.beb01cab.css",
+    "static/js/main.8f0af144.js"
   ]
 }
