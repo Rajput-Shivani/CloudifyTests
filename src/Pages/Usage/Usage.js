@@ -16,12 +16,12 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const usage_info = [
   {
-    label: "USAGE INFORMATION",
+    label: "Usage Information",
     heading: "Software As A Service(SaaS)",
     desc: "A delivery model in which a software application is hosted by a third-party provider and made available to customers over the Internet. Customers can access the software through a web browser or a mobile app, without the need to install and maintain it on their own local servers or computers.",
   },
   {
-    label: "USAGE INFORMATION",
+    label: "Usage Information",
     heading: "On Premise Setup",
     desc: "A software that is installed and runs on a customer’s own local servers or computers. The customer is responsible for setting up, maintaining and upgrading the software, as well as ensuring its proper functioning and security.",
   },
