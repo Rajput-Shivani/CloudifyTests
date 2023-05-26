@@ -75,6 +75,12 @@
 }
 .textField {
   background-color: white;
+  height: 55px;
+}
+
+.textFieldMessage{
+  background-color: white;
+  height: 125px;
 }
 .btn_section {
   padding: 2rem;
@@ -105,7 +111,7 @@
   }
 }
 
-@media screen and (max-width: 585px) {
+@media screen and (max-width: 750px) {
   #contact {
     padding-top: 1rem;
   }
@@ -144,6 +150,7 @@
 .message_field {
   padding-left: 0rem;
   padding-right: 0rem;
+  margin-top: 20px;
 }
 .btn_section {
   padding: 0rem;

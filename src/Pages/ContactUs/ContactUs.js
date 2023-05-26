@@ -24,6 +24,10 @@ const ContactUs = () => {
   const [messageError, setMessageError] = useState(false);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
+  const nameRegex = /^[a-zA-Z]+$/; 
+  const emailRegex = /\S+@\S+\.\S+/; 
+  const phoneRegex = /^\d{10}$/; 
+
   function createJiraIssue() {
     const headers = {
       "Content-Type": "application/json",
@@ -66,9 +70,7 @@ const ContactUs = () => {
     console.log({ firstName, lastName, email, phoneNo, message });
     let hasError = false;
 
-    const nameRegex = /^[a-zA-Z]+$/; 
-    const emailRegex = /\S+@\S+\.\S+/; 
-    const phoneRegex = /^\d{10}$/; 
+    
 
     if (firstName === "" || !nameRegex.test(firstName)) {
       setFirstNameError(true);
@@ -144,10 +146,10 @@ const ContactUs = () => {
 
   return (
     <>
-      <Container id="contact" data-aos="zoom-in">
+      <Container id="contact">
         <div className="contact_box">
-          <div className="top_secion" data-aos="fade-up">
-            <h1 className="contact_text_h1">Schedule a call with us ...</h1>
+          <div className="top_secion">
+            <h1 className="contact_text_h1">Schedule a call with us now!</h1>
             {isFormSubmitted ? (
               <p className="contact_text">Your response has been sent. We will get back to you shortly.</p>
 
@@ -159,21 +161,32 @@ const ContactUs = () => {
             )}
           </div>
         </div>
-        <div className="contact_section" data-aos="zoom-in">
+        <div className="contact_section" data-aos="fade-down">
           <form onSubmit={handleSubmit}>
             {/* {showError()} */}
             <div className="textfield_section">
               <TextField
+                style={{
+                  marginBottom: "10px"
+                }}
                 id="outlined-basic"
                 label="First Name"
                 variant="outlined"
-                className="textField"
+                className="textField InputName"
                 type="text"
                 value={firstName}
                 onChange={(event) => setFirstName(event.target.value)}
                 error={firstNameError}
                 helperText={firstNameError ? "Please enter your first name" : ""}
                 fullWidth
+              //   InputProps={{
+              //     style: {
+              //         marginTop:'4px'
+              //     }
+              // }}
+              // inputProps={{
+              //   style: { color: 'pink',marginTop:'4px' },
+              // }}
               />
               <TextField
                 id="outlined-basic"
@@ -189,15 +202,27 @@ const ContactUs = () => {
             </div>
             <div className="textfield_section_2">
               <TextField
+                style={{
+                  marginBottom: "10px"
+                }}
                 id="outlined-basic"
                 label="Email Id"
                 variant="outlined"
                 className="textField"
                 type="text"
                 value={email}
-                onChange={(event) => setEmail(event.target.value)}
+                onChange={(event) => {
+                  setEmail(event.target.value)}}
+                  onBlur={(event) => {
+                    const enteredEmail = event.target.value;
+                    if (!emailRegex.test(enteredEmail)) {
+                      setEmailError(true);
+                    } else {
+                      setEmailError(false);
+                    }
+                  }}
                 error={emailError}
-                helperText={emailError ? "Please enter a valid email" : ""}
+                helperText={emailError ? "Invalid Email Id" : ""}
                 fullWidth
               />
               <TextField
@@ -206,10 +231,20 @@ const ContactUs = () => {
                 variant="outlined"
                 className="textField"
                 type="text"
+                onChange={(event) => {
+                  const input = event.target.value.replace(/\D/g, ''); // Remove non-digit characters
+                  setPhoneNo(input);
+
+                  if (!input.match(/^\d+$/) || input.length !== 10) {
+                    setPhoneNoError(true);
+                  } else {
+                    setPhoneNoError(false);
+                  }
+                }}
                 value={phoneNo}
-                onChange={(event) => setPhoneNo(event.target.value)}
+                // onChange={(event) => setPhoneNo(event.target.value)}
                 error={phoneNoError}
-                helperText={phoneNoError ? "Please enter a valid number" : ""}
+                helperText={phoneNoError ? "Invalid Mobile Number" : ""}
                 fullWidth
               />
             </div>
@@ -219,7 +254,7 @@ const ContactUs = () => {
                 variant="outlined"
                 multiline
                 rows={4}
-                className="textField"
+                className="textFieldMessage"
                 type="text"
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}

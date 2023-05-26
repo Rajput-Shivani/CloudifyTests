@@ -26,7 +26,7 @@ const navItems = [
     id: "home",
     Name: "Home",
     link:"/",
-    offset: -70
+    offset: 0
   },
   {
     id: "about",
@@ -56,7 +56,7 @@ const navItems = [
     id: "contact",
     Name: "Contact Us",
     link:"/contact",
-    offset: -650
+    offset: -450
   },
 ];
 
