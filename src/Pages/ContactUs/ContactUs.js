@@ -177,7 +177,7 @@ const ContactUs = () => {
                 value={firstName}
                 onChange={(event) => setFirstName(event.target.value)}
                 error={firstNameError}
-                helperText={firstNameError ? "Please enter your first name" : ""}
+                helperText={firstNameError ? "Please enter your First Name" : ""}
                 fullWidth
               //   InputProps={{
               //     style: {
@@ -196,7 +196,7 @@ const ContactUs = () => {
                 value={lastName}
                 onChange={(event) => setLastName(event.target.value)}
                 error={lastNameError}
-                helperText={lastNameError ? "Please enter your last name" : ""}
+                helperText={lastNameError ? "Please enter your Last Name" : ""}
                 fullWidth
               />
             </div>
@@ -222,7 +222,7 @@ const ContactUs = () => {
                     }
                   }}
                 error={emailError}
-                helperText={emailError ? "Invalid Email Id" : ""}
+                helperText={emailError ? "Please enter valid Email Id" : ""}
                 fullWidth
               />
               <TextField
@@ -244,7 +244,7 @@ const ContactUs = () => {
                 value={phoneNo}
                 // onChange={(event) => setPhoneNo(event.target.value)}
                 error={phoneNoError}
-                helperText={phoneNoError ? "Invalid Mobile Number" : ""}
+                helperText={phoneNoError ? "Please enter valid Mobile No." : ""}
                 fullWidth
               />
             </div>
@@ -259,7 +259,7 @@ const ContactUs = () => {
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
                 error={messageError}
-                helperText={messageError ? "Please enter a message" : ""}
+                helperText={messageError ? "Please enter a Message" : ""}
                 fullWidth
               />
             </div>
