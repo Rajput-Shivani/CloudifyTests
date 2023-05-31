@@ -5,6 +5,7 @@ import Home from "../Container/Home";
 import Features from "../Features/Features";
 import Offerings from "../Offerings/Offerings";
 import Usage from "../Usage/Usage";
+import Footer from "../../Pages/Footer/Footer";
 
 function LandingPage() {
   return (
@@ -15,6 +16,7 @@ function LandingPage() {
       <Features />
       <Usage />
       <ContactUs />
+      <Footer />
     </div>
   );
 }

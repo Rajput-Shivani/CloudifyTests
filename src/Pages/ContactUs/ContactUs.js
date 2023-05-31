@@ -100,9 +100,9 @@ const ContactUs = () => {
 
   return (
     <>
-      <Container id="contact" data-aos="zoom-in">
+      <Container id="contact">
         <div className="contact_box">
-          <div className="top_secion" data-aos="fade-up">
+          <div className="top_secion">
             <h1 className="contact_text_h1">Schedule a call with us ...</h1>
             <p className="contact_text">
               To receive further information, please fill out the form below,
@@ -110,7 +110,7 @@ const ContactUs = () => {
             </p>
           </div>
         </div>
-        <div className="contact_section" data-aos="zoom-in">
+        <div className="contact_section" data-aos="fade-down">
           <form onSubmit={handleSubmit}>
             {showError()}
             <div className="textfield_section">
