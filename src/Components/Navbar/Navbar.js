@@ -18,32 +18,45 @@ import { Link } from "react-scroll";
 import logo from "../../assets/logo.svg";
 import logo_dark from "../../assets/logo-dark.svg";
 import "./navbar.css";
+import CloseIcon from "@mui/icons-material/Close";
 
 const drawerWidth = 240;
 const navItems = [
   {
     id: "home",
     Name: "Home",
+    link:"/",
+    offset: 0
   },
   {
     id: "about",
-    Name: "About",
+    Name: "About Us",
+    link:"/about",
+    offset: -70
   },
   {
     id: "offerings",
     Name: "Offerings",
+    link:"/offerings",
+    offset: -400
   },
   {
     id: "features",
     Name: "Benefits",
+    link:"/features",
+    offset: -450
   },
   {
     id: "usage",
     Name: "Usage",
+    link:"/usage",
+    offset: -450
   },
   {
     id: "contact",
     Name: "Contact Us",
+    link:"/contact",
+    offset: -450
   },
 ];
 
@@ -53,6 +66,10 @@ function Navbar(props) {
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
+  };
+
+  const handleDrawerClose = () => {
+    setMobileOpen(false);
   };
 
   const drawer = (
@@ -84,7 +101,8 @@ function Navbar(props) {
                     spy={true}
                     smooth={true}
                     duration={700}
-                    offset={-70}
+                    offset={item.offset}
+                    onClick={handleDrawerClose}
                   >
                     {item.Name}
                   </Link>
@@ -95,6 +113,17 @@ function Navbar(props) {
           </ListItem>
         ))}
       </List>
+      <Box onClick={handleDrawerToggle} sx={{ position: "absolute", top: 0, right: 0 }}>
+      <IconButton
+        color="inherit"
+        aria-label="close drawer"
+        edge="start"
+        onClick={handleDrawerClose}
+        sx={{ mr: 0, display: { sm: "none" } }}
+      >
+        <CloseIcon />
+      </IconButton>
+      </Box>
     </Box>
   );
 

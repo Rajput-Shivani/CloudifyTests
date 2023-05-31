@@ -27,7 +27,7 @@ const LeftSection = () => {
             duration={700}
             offset={-70}
           >
-            About
+            About Us
           </Link>
         </li>
         <li>
@@ -37,7 +37,7 @@ const LeftSection = () => {
             spy={true}
             smooth={true}
             duration={700}
-            offset={-70}
+            offset={-90}
           >
             Offerings
           </Link>
@@ -49,7 +49,7 @@ const LeftSection = () => {
             spy={true}
             smooth={true}
             duration={700}
-            offset={-70}
+            offset={-100}
           >
             Benefits
           </Link>

@@ -35,13 +35,16 @@
 .textfield_section {
   display: flex;
   gap: 1rem;
+  height: 55px;
 }
 @media screen and (max-width: 750px) {
   .textfield_section {
     flex-direction: column;
+    height: auto;
   }
   .textfield_section_2 {
     flex-direction: column;
+    height: auto;  
   }
   #contact {
     padding-top: 3rem;
@@ -55,7 +58,8 @@
   gap: 1rem;
   padding-top: 3rem;
   position: relative;
-  bottom: 1.5rem;
+  bottom: 1rem;
+  height: 105px;
 }
 .textField {
   background-color: white;
@@ -65,9 +69,18 @@
   gap: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  height: 140px;
+  bottom: 1rem;
+  padding-top: 1rem;
 }
 .textField {
   background-color: white;
+  height: 55px;
+}
+
+.textFieldMessage{
+  background-color: white;
+  height: 125px;
 }
 .btn_section {
   padding: 2rem;
@@ -98,7 +111,7 @@
   }
 }
 
-@media screen and (max-width: 585px) {
+@media screen and (max-width: 750px) {
   #contact {
     padding-top: 1rem;
   }
@@ -110,11 +123,15 @@
     padding-left: 0rem;
     padding-right: 0rem;
     padding-top: 1rem;
+    padding-bottom: 1rem;
     margin-top: 1.5rem;
+    /* margin-bottom: 2rem; */
+    height: 8.5rem;
   }
   .message_field {
     padding-left: 0rem;
     padding-right: 0rem;
+    height: 140px;
   }
   .btn_section {
     padding: 0rem;
@@ -133,6 +150,7 @@
 .message_field {
   padding-left: 0rem;
   padding-right: 0rem;
+  margin-top: 20px;
 }
 .btn_section {
   padding: 0rem;
@@ -155,4 +173,10 @@
   .contact_text {
     font-size: 15px;
   }
+}
+
+.MuiFormHelperText-root {
+  margin-top: 25px !important;
+  /* margin-bottom: 40px !important; */
+  margin-left: 0px !important;
 }
